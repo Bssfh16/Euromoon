@@ -65,6 +65,7 @@ public class Reis {
         return aankomstStation;
     }
 
+
     public LocalDateTime getVertrektijd() {
         return vertrekTijd;
     }
