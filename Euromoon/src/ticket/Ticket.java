@@ -3,7 +3,7 @@ package ticket;
 import main.Euromoon;
 import personen.Passagier;
 import reis.Reis;
-import trein.Trein;
+
 
 import java.util.ArrayList;
 
@@ -126,7 +126,7 @@ public class Ticket {
 
         System.out.println("Kies een klasse: ");
         System.out.println("1. Eerste klasse");
-        System.out.println("2. Eerste klasse");
+        System.out.println("2. Tweede klasse");
 
         int klasseKeuze = Euromoon.getIntInput("Keuze: ");
         String klasseType = "";

@@ -1,0 +1,15 @@
+==================================
+Boardinglijst Euromoon
+==================================
+Reis: Brussel -> Parijs
+Vertrektijd: 2025-02-04T10:30
+Aantal passagiers: 1
+==================================
+Passagierslijst
+==================================
+Ticket #2
+Naam: Youssef Benil
+Rijksregisternummer: 12345678936
+Geboortedatum: 2001-06-03
+Klasse: Tweede klasse
+==============================

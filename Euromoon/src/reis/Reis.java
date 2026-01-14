@@ -47,27 +47,23 @@ public class Reis {
         this.trein = trein;
     }
 
-    public void setConducteur(Conducteur conducteur) {
-        this.conducteur = conducteur;
-    }
-
-    public boolean voegStewardToe(Steward steward) {
-        if (!stewards.contains(steward)) {
-            stewards.add(steward);
-            System.out.println("Steward: "  + steward.getVoornaam() + " " + steward.getAchternaam() + " werd succesvol toegevoegd.");
-            return true;
-        }
-        System.out.println("Er is een fout opgetreden! Probeer opnieuw.");
-        return false;
-    }
+//    public void setConducteur(Conducteur conducteur) {
+//        this.conducteur = conducteur;
+//    }
+//
+//    public boolean voegStewardToe(Steward steward) {
+//        if (!stewards.contains(steward)) {
+//            stewards.add(steward);
+//            System.out.println("Steward: "  + steward.getVoornaam() + " " + steward.getAchternaam() + " werd succesvol toegevoegd.");
+//            return true;
+//        }
+//        System.out.println("Er is een fout opgetreden! Probeer opnieuw.");
+//        return false;
+//    }
 
     public boolean gaatVertrekken() {
         return trein != null && conducteur != null && stewards.size() >= 3;
     }
-
-//    public int getReisID() {
-//        return reisID;
-//    }
 
     public String getVertrekstation() {
         return vertrekStation;
@@ -85,17 +81,9 @@ public class Reis {
         return trein;
     }
 
-//    public Conducteur getConducteur() {
-//        return conducteur;
-//    }
-//
-//    public ArrayList<Steward> getStewards() {
-//        return stewards;
-//    }
-
     public String getFileName() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm");
-        return vertrekStation + "-" + aankomstStation + "-" + vertrekTijd.format(formatter) + ".txt";
+        return vertrekStation + "-" + aankomstStation + " " + vertrekTijd.format(formatter) + ".txt";
     }
 
     @Override
@@ -125,16 +113,16 @@ public class Reis {
         System.out.print("Aankomststation: ");
         String aankomst = scanner.nextLine();
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH:mm");
 
         LocalDateTime vertrekTijd = null;
         while (vertrekTijd == null) {
-            System.out.print("Vertrektijd: (yyyy-MM-dd_HH-mm)");
+            System.out.print("Vertrektijd: (yyyy-MM-dd_HH:mm) ");
             String tijdStr = scanner.nextLine();
             try {
                 vertrekTijd = LocalDateTime.parse(tijdStr, formatter);
             } catch (DateTimeParseException e) {
-                System.err.println("Ongeldige datum/tijd. Gebruik formaat yyyy-MM-dd_HH-mm");
+                System.err.println("Ongeldige datum/tijd. Gebruik formaat yyyy-MM-dd_HH:mm.");
             }
         }
 
@@ -153,14 +141,14 @@ public class Reis {
             return;
         }
 
-        System.out.println("Beschikbare reizen");
+        System.out.println("Beschikbare reizen: ");
         for (int i = 0; i < reizen.size(); i++) {
             System.out.println((i +1) + ". " + reizen.get(i));
         }
 
-        int reisIndex = Euromoon.getIntInput("Kies reisnummer") -1;
+        int reisIndex = Euromoon.getIntInput("Kies reisnummer: ") -1;
         if (reisIndex < 0 || reisIndex >= reizen.size()) {
-            System.err.println("Ongeldige reis");
+            System.err.println("Ongeldige reis.");
             return;
         }
 
@@ -174,7 +162,6 @@ public class Reis {
             if (antwoord.equalsIgnoreCase("j")) {
                 Trein newtrein  = Trein.maakTreinAan();
                 if (newtrein != null) {
-                    Trein.getTreinen().add(newtrein);
                 } else {
                     return;
                 }
@@ -266,14 +253,13 @@ public class Reis {
 
 
     public static void bekijkAlleReizen() {
-        System.out.println("Alle reizen:");
+        System.out.println("Alle reizen :");
         if (Reis.getReizen().isEmpty()) {
-            System.out.println("Geen treinen beschikbaar");
+            System.out.println("Geen reizen ingepland.");
         } else {
             for (Reis r : Reis.getReizen()) {
                 System.out.println(r);
             }
         }
     }
-
 }

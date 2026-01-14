@@ -1,33 +1,20 @@
 package trein;
 
 public class Wagon {
-    private String klasse;
-    private int aantalStoelen;
-    private int capaciteit;
 
-    /*public Wagon(String klasse, int aantalStoelen) {
-        this.klasse = klasse;
-        this.aantalStoelen = aantalStoelen;
-    } */
+    private int aantalStoelen;
 
     public Wagon(int capaciteit) {
-        this.capaciteit = capaciteit;
+        this.aantalStoelen = capaciteit;
     }
-
-    /* public String getKlasse() {
-        return klasse;
-    } */
 
     public int getAantalStoelen() {
         return aantalStoelen;
     }
 
-//    public int getCapaciteit() {
-//        return capaciteit;
-//    }
 
     @Override
     public String toString() {
-        return "Wagon, klasse:  " + klasse + ", aantalStoelen: " + aantalStoelen;
+        return "Aantal stoelen: " + aantalStoelen;
     }
 }

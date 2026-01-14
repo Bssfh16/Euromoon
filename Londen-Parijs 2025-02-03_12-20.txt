@@ -1,0 +1,15 @@
+==================================
+Boardinglijst Euromoon
+==================================
+Reis: Londen -> Parijs
+Vertrektijd: 2025-02-03T12:20
+Aantal passagiers: 1
+==================================
+Passagierslijst
+==================================
+Ticket #1
+Naam: Jan Lambert
+Rijksregisternummer: 12345678912
+Geboortedatum: 2001-02-02
+Klasse: Eerste klasse
+==============================

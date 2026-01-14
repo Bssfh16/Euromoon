@@ -86,7 +86,7 @@ public class Trein {
 
         for (int i = 0; i < aantalWagons; i++) {
             int capaciteit = -1;
-            while (capaciteit <= 0 || capaciteit > maxWagons) {
+            while (capaciteit <= 0) {
                 capaciteit = Euromoon.getIntInput("Capaciteit voor wagon: " + (i + 1) + ": ");
                 if (capaciteit <= 0) {
                     System.out.println("Capaciteit moet positief zijn");
