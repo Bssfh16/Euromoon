@@ -95,13 +95,13 @@ public class Reis {
 
     public String getFileName() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm");
-        return vertrekStation + " - " + aankomstStation + " " + vertrekTijd.format(formatter) + ".txt";
+        return vertrekStation + "-" + aankomstStation + "-" + vertrekTijd.format(formatter) + ".txt";
     }
 
     @Override
     public String toString() {
 
-        String infoTrein = (trein != null) ? trein.toString() : "Geen trein gekoppeld";
+        String infoTrein = (trein != null) ? trein.toString() : "Geen trein gekoppeld.";
         String infoConducteur = (conducteur != null) ? conducteur.getVoornaam() + " " + conducteur.getAchternaam() : "Geen conducteur toegewezen.";
 
         return "Informatie over REIS #" + reisID + "\n" +
@@ -267,11 +267,11 @@ public class Reis {
 
     public static void bekijkAlleReizen() {
         System.out.println("Alle reizen:");
-        if (Trein.getTreinen().isEmpty()) {
+        if (Reis.getReizen().isEmpty()) {
             System.out.println("Geen treinen beschikbaar");
         } else {
-            for (Trein t : Trein.getTreinen()) {
-                System.out.println(t);
+            for (Reis r : Reis.getReizen()) {
+                System.out.println(r);
             }
         }
     }

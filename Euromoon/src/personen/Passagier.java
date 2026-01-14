@@ -33,8 +33,31 @@ public class Passagier extends Persoon{
         System.out.print("Achternaam: ");
         String achternaam = scanner.nextLine();
 
-        System.out.print("Rijksregisternummer: ");
-        String rijksregisternummer = scanner.nextLine();
+
+        String rijksregisternummer = "";
+        boolean RRnummer = false;
+
+        while (!RRnummer) {
+            System.out.print("Rijksregisternummer: (11 cijfers) ");
+            rijksregisternummer = scanner.nextLine();
+
+            if (rijksregisternummer.length() == 11) {
+                boolean geldig = true;
+                for (int i = 0; i < rijksregisternummer.length(); i++) {
+                    if (!Character.isDigit(rijksregisternummer.charAt(i))) {
+                        geldig = false;
+                        break;
+                    }
+                }
+                if (geldig) {
+                    RRnummer = true;
+                }  else {
+                    System.err.println("Ongeldig. Gebruik alleen maar cijfers, geen letters/streepjes! ");
+                }
+            } else {
+                System.err.println("Ongeldig. Het nummer moet exact 11 cijfers bevatten");
+            }
+        }
 
         LocalDate geboortedatum = null;
         while (geboortedatum == null) {
