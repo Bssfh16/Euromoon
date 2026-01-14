@@ -8,7 +8,7 @@ Dit project hoort bij het vak "Programming Advanced". Het is een beheersysteem v
 - Het koppelen van treinen met reizen.
 - Het verkopen van tickets aan passagiers.
 - Het bewaren van lijsen passagiers voor een bepaalde reis.
-- 
+  
 # Bronnen
 - AI-tool, Gemini en ChatGPT voor complexe debugging en foutcontroles.
 - Cursus "Programming Advanced", raadpleegbaar via canvas.ehb.be.
