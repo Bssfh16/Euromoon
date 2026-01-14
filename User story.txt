@@ -1,0 +1,15 @@
+1. Als eindgebruiker wil ik personen digitaal registreren zodat ik zeker weet dat hun gegevens correct in het systeem terechtkomen voor later gebruik.
+
+2. Als Application Owner wil ik dat het systeem unieke persoonlijke gegevens controleert zodat de database niet over dubbele en ongeldige gegevens beschikt.
+
+3. Als eindgebruiker wil ik treinen samenstellen door een bepaald type locomotief te kiezen en wagons toe te voegen zodat ik deze met reizen kan koppelen.
+
+4. Als eindgebruiker wil ik een nieuwe reis aanmaken met de namen van de stations en de vertrektijd zodat ik de ticketverkoop kan opstarten.
+
+5. Als eindgebruiker wil ik een ticket koppelen aan een bepaalde reis en persoon zodat ik een geldig bewijs kan genereren voor de klant.
+
+6. Als eindgebruiker wil ik een duidelijke melding krijgen bij foutieve invoer zonder dat de applicatie crasht zodat ik het programma niet altijd opnieuw moet opstarten.
+
+7. Als Application Owner wil ik dat het verkoopproces automatisch blokkeert wanneer de maximale capaciteit van de trein bereikt is zodat er op dat moment geen tickets meer verkocht kunnen worden.
+
+8. Als eindgebruiker wil ik een overzicht krijgen van alle passagiers voor een bepaalde reis zodat ik deze kan raadplegen en afdrukken om de aanwezigheid te controleren.
