@@ -1,4 +1,4 @@
-# Project-Programming-Advanced-Euromoon
+# Euromoon
 Dit project hoort bij het vak "Programming Advanced". Het is een beheersysteem voor een fictieve treindienst "Euromoon". Code wordt in "Java" geschreven.
 
 # Functionaliteiten
