@@ -12,7 +12,6 @@ public class Wagon {
         return aantalStoelen;
     }
 
-
     @Override
     public String toString() {
         return "Aantal stoelen: " + aantalStoelen;
