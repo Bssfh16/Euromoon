@@ -10,7 +10,7 @@ Dit project hoort bij het vak "Programming Advanced". Het is een beheersysteem v
 - Het bewaren van lijsen passagiers voor een bepaalde reis.
   
 # Bronnen
-- AI-tool, Gemini en ChatGPT voor complexe debugging en foutcontroles.
+- AI-tool, Gemini en ChatGPT voor: complexe debugging en foutcontroles.
 - Cursus "Programming Advanced", raadpleegbaar via canvas.ehb.be.
 - Cursus "Process & project flow, raadpleegbaar via canvas.ehb.be, voor het maken van product backlog.
 - 2017 Dutch Scrum Guide, raadpleegbaar op canvas.ehb.be, voor het maken van product backlog.
