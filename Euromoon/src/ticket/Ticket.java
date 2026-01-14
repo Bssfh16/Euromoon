@@ -7,6 +7,11 @@ import reis.Reis;
 
 import java.util.ArrayList;
 
+/** De klasse Ticket gaat over de ticketverkoop voor Euromoon.
+ * Een ticket koppelt een passagier en een klasse aan een reis.
+ * @author Hisham Boussof
+ */
+
 public class Ticket {
     private static int ticketOpteller = 1;
     private int ticketID;
@@ -52,6 +57,11 @@ public class Ticket {
                 "Klasse: " + klasseTicket;
     }
 
+    /** Deze methode wordt gebruikt om verkochte tickets voor een reis op te tellen.
+     *  Dit wordt gedaan om te voorkomen dat er meer plaatsen verkopen worden dan de maximale capaciteit.
+     * @param reis De reis waarvan het aantal tickets moet worden geteld.
+     * @return Het totaal aantal verkochte tickets voor deze reis.
+     */
 
     public static int telTicketsVoorReisOp(Reis reis) {
         int aantalTickets = 0;
@@ -63,6 +73,11 @@ public class Ticket {
         return aantalTickets;
     }
 
+    /** Deze methode beneden start het proces voor het verkopen van een ticket op.
+     * Er wordt om een reis en passagier gevraagd.
+     * Controle wordt uitgevoerd voor nog beschikbare plaatsen.
+     * Nieuw ticket kan daarna gemaakt worden.
+     */
 
     public static void verkoopTicket() {
         System.out.println("Ticket verkopen");

@@ -5,6 +5,9 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/** Deze klasse beheert de gegevens van alle passagiers van Euromoon.
+ * @author Hisham Boussof
+ */
 
 public class Passagier extends Persoon{
 
@@ -23,6 +26,11 @@ public class Passagier extends Persoon{
     public String toString() {
         return "Passagier: " + super.toString();
     }
+
+    /** De methode juist beneden wordt gebruikt om een passagier te registreren.
+     * Deze is interactief.
+     * Er wordt ook gecontroleerd als er juist 11 cijfers in rijksregisternummer zitten.
+     */
 
     public static void registreerPassagier() {
         System.out.println("Passagier registreren: ");
@@ -74,6 +82,10 @@ public class Passagier extends Persoon{
         passagiers.add(passagier);
         System.out.println("Passagier succesvol geregistreerd");
     }
+
+    /** De methode juist beneden toont een overzicht van alle geregistreerde passagiers.
+     *  Als de lijst leeg is, verschijnt er een melding in de console.
+     */
 
     public static void bekijkAllePassagiers() {
         System.out.println("Alle passagiers:");

@@ -15,6 +15,11 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/** Deze klasse beheert de informatie van een treinreis.
+ * Het koppelt treinen aan trajecten en behoudt boardinglijst.
+ * @author Hisham Boussof
+ */
+
 public class Reis {
 
     private static int reisOpteller = 0;
@@ -47,19 +52,6 @@ public class Reis {
         this.trein = trein;
     }
 
-//    public void setConducteur(Conducteur conducteur) {
-//        this.conducteur = conducteur;
-//    }
-//
-//    public boolean voegStewardToe(Steward steward) {
-//        if (!stewards.contains(steward)) {
-//            stewards.add(steward);
-//            System.out.println("Steward: "  + steward.getVoornaam() + " " + steward.getAchternaam() + " werd succesvol toegevoegd.");
-//            return true;
-//        }
-//        System.out.println("Er is een fout opgetreden! Probeer opnieuw.");
-//        return false;
-//    }
 
     public boolean gaatVertrekken() {
         return trein != null && conducteur != null && stewards.size() >= 3;
@@ -103,6 +95,10 @@ public class Reis {
 
     }
 
+    /** Deze methode maakt een nieuw Reis-object aan.
+     * Deze methode verzamelt de noodzakelijke gegevens zoals vertrekpunt,
+     * bestemming en datum om een reis te definiëren.
+     */
 
     public static void maakReis() {
         System.out.println("Reis aanmaken");
@@ -131,7 +127,8 @@ public class Reis {
         System.out.println("Reis succesvol aangemaakt");
     }
 
-
+    /** Deze methode koppelt treinen aan een reis.
+     */
 
     public static void koppelTreinenAanReis() {
         System.out.println("Trein aan een reis koppelen");
@@ -186,6 +183,8 @@ public class Reis {
         System.out.println("Trein succesvol aan reis gekoppeld");
     }
 
+    /** Deze methode drukt boardinglijst af in textbestand.
+     */
 
     public static void drukBoardinglijstAf() {
         System.out.println("Boardinglijst aanmaken");
@@ -251,6 +250,9 @@ public class Reis {
         }
     }
 
+    /**
+     * Deze methode toont een overzicht van alle gemaakte reizen.
+     */
 
     public static void bekijkAlleReizen() {
         System.out.println("Alle reizen :");

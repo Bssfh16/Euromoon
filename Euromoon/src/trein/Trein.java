@@ -4,6 +4,12 @@ import main.Euromoon;
 
 import java.util.ArrayList;
 
+/** Deze klasse geeft alle onderdelen en specifieke kenmerken van een trein weer.
+ * Een trein bestaat uit een locomotief en een groep wagons.
+ * De totale passagierscapaciteit kan berekend worden.
+ * @author Hisham Boussof
+ */
+
 public class Trein {
     private Locomotief locomotief;
 
@@ -18,6 +24,10 @@ public class Trein {
         this.locomotief = locomotief;
         this.wagons = new ArrayList<>();
     }
+
+    /** De methode beneden voegt een wagon toe.
+     * @param nieuweWagon Het wagon-object dat aan de locomotief moet worden gekoppeld
+     */
 
     public void voegWagonToe(Wagon nieuweWagon) {
         int maximumWagons = locomotief.getMaxWagons();
@@ -45,6 +55,10 @@ public class Trein {
     public String toString() {
         return "De trein bestaat uit: " + wagons.size() + " wagons en heeft een maximum aantal stoelen van: " + getTotaalCapaciteit();
     }
+
+    /** De methode juist beneden stelt een trein op door een locomotief te koppelen aan wagons.
+     * @return Een nieuw gemaakte trein is klaar om aan een reis gekoppeld te worden.
+     */
 
     public static Trein maakTreinAan() {
 
@@ -103,6 +117,8 @@ public class Trein {
         return trein;
     }
 
+    /** De methode hierbeneden toont een overzicht van alle gevormde treinen in het systeem.
+     */
 
     public static void bekijkAlleTreinen() {
         System.out.println("Alle treinen: ");

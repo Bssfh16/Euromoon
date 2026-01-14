@@ -3,6 +3,11 @@ package personen;
 import java.time.LocalDate;
 import java.util.Objects;
 
+/** De hoofdklasse voor gegevens van elk individu in het systeem
+ * Deze klasse is abstract want wordt altijd extended.
+ * @author Hisham Boussof
+ */
+
 public abstract class Persoon {
 
     private String voornaam;
@@ -33,37 +38,10 @@ public abstract class Persoon {
         return rijksregisternummer;
     }
 
-//    public void setVoornaam(String voornaam) {
-//        this.voornaam = voornaam;
-//    }
-//
-//    public void setAchternaam(String achternaam) {
-//        this.achternaam = achternaam;
-//    }
-//
-//    public void setRijksregisternummer(String rijksregisternummer) {
-//        this.rijksregisternummer = rijksregisternummer;
-//    }
-//
-//    public void setGeboortedatum(LocalDate geboortedatum) {
-//        this.geboortedatum = geboortedatum;
-//    }
-
     @Override
     public String toString() {
         return achternaam + " " + voornaam + " " + ", geboren op: " + geboortedatum + ", rijksregisternummer:  " +  rijksregisternummer;
     }
-
-    /* @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof Persoon persoon)) return false;
-        return Objects.equals(getRijksregisternummer(), persoon.getRijksregisternummer());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(getRijksregisternummer());
-    } */
 
     @Override
     public boolean equals(Object o) {
